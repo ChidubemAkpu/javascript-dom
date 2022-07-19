@@ -1,0 +1,29 @@
+*{
+    box-sizing:border-box;
+    
+}
+#main-content{
+    border: 2px solid red;
+    padding: 1em;
+    color: green;
+    font-size: large;
+}
+.add-minus{
+    font-size: xx-large;
+    display: flex;
+    padding: 1em 4em;
+    justify-content: space-between;
+}
+section{
+    padding:1px 5px;
+    background: green;;
+    color:white;
+    border-radius: 0.5em;
+    cursor:pointer;
+}
+.bought-items {
+    display: flex;
+    flex-direction:column;
+    row-gap: 10px;
+    padding: 5px;
+}
