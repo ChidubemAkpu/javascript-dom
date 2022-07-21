@@ -4,57 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learn javascript</title>
+    <style>
+        .alert, .showMe{
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+            text-align: center;
+            max-width:600px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        p{
+            color:red;
+            font-size:xx-large;
+        }
+        #plus{
+            margin-right: 40px;
+        }
+        #plus, #minus{
+            cursor: pointer;
+            font-size: xx-large;
+        }
+        .showMe{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>10</td>
-            <td>11</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>16</td>
-            <td>17</td>
-            <td>19</td>
-            <td>24</td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td>13</td>
-            <td>12</td>
-            <td>23</td>
-        </tr>
-        
-    </table>
-    <script>
-        let tables = document.querySelectorAll('table tr');
-        for (let element of tables) {
-            let rowItems = element.querySelectorAll('td');
-            let sum = 0;
-            for (let eachCell of rowItems) {
-                let eachData = eachCell.innerHTML;
-                sum += +eachData;
-            }
-            let newItem = document.createElement('td');
-            newItem.innerHTML = sum;
-            element.appendChild(newItem);
-        }
-        
-    </script>
     
+    <div class="alert">
+        <strong>Hi there!</strong> You've read an important message.<br> <b id="plus" onclick="addFunction()">+</b><b id="minus" onclick="removeFunction()">-</b><br>
+        <p></p>
+    </div>
+    <div class="showMe">
+        <section></section> <br>
+        <p></p>
+    </div>
+    <script>
+        "use strict";
+        let div = document.querySelector('.alert');
+        let div2 = document.querySelector('.showMe');
+        
+        let name = 0;
+        function addFunction() {
+            name++
+            document.querySelector('section').innerHTML= 'added'
+            document.querySelectorAll('p').forEach((item) =>item.innerHTML = name);
+            if (name > 0) {
+                div2.style.display = 'block'
+            } else {
+                div2.style.display = 'none';
+            }
+            
+        }
+
+        function removeFunction() {
+            name--
+            document.querySelector('section').innerHTML = 'subtracted'
+            document.querySelectorAll('p').forEach((anon) => anon.innerHTML = name);
+            if (name > 0) {
+                div2.style.display = 'block'
+            } else {
+                div2.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
