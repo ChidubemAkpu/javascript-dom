@@ -20,6 +20,7 @@
         p{
             color:red;
             font-size:xx-large;
+            display: none;
         }
         #plus{
             margin-right: 40px;
@@ -55,8 +56,10 @@
             document.querySelectorAll('p').forEach((item) =>item.innerHTML = name);
             if (name > 0) {
                 div2.style.display = 'block'
+                document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'block');
             } else {
                 div2.style.display = 'none';
+                document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'none');
             }
             
         }
@@ -67,8 +70,10 @@
             document.querySelectorAll('p').forEach((anon) => anon.innerHTML = name);
             if (name > 0) {
                 div2.style.display = 'block'
+                document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'block');
             } else {
                 div2.style.display = 'none';
+                document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'none');
             }
         }
     </script>
