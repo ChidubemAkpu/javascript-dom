@@ -37,7 +37,7 @@
 <body>
     
     <div class="alert">
-        <strong>Hi there!</strong> You've read an important message.<br> <b id="plus" onclick="addFunction()">+</b><b id="minus" onclick="removeFunction()">-</b><br>
+        <strong>Hi there!</strong> Add to cart.<br> <article>$100</article><b id="plus" onclick="addFunction()">+</b><b id="minus" onclick="removeFunction()">-</b><br>
         <p></p>
     </div>
     <div class="showMe">
@@ -48,12 +48,16 @@
         "use strict";
         let div = document.querySelector('.alert');
         let div2 = document.querySelector('.showMe');
+        let div3 = document.querySelector('article');
+        let amount = div3.innerHTML.slice(1);
         
         let name = 0;
         function addFunction() {
             name++
-            document.querySelector('section').innerHTML= 'added'
-            document.querySelectorAll('p').forEach((item) =>item.innerHTML = name);
+            document.querySelector('section').innerHTML= 'added to cart'
+            document.querySelectorAll('p')[0].innerHTML = name;
+            document.querySelectorAll('p')[1].innerHTML ='$' + (name * +amount) ;
+            document.querySelectorAll('p')[1].style.color='blue'
             if (name > 0) {
                 div2.style.display = 'block'
                 document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'block');
@@ -66,8 +70,10 @@
 
         function removeFunction() {
             name--
-            document.querySelector('section').innerHTML = 'subtracted'
-            document.querySelectorAll('p').forEach((anon) => anon.innerHTML = name);
+            document.querySelector('section').innerHTML = 'removed one item from cart'
+            document.querySelectorAll('p')[0].innerHTML = name;
+            document.querySelectorAll('p')[1].innerHTML ='$' + (name * +amount) ;
+            document.querySelectorAll('p')[1].style.color='blue'
             if (name > 0) {
                 div2.style.display = 'block'
                 document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'block');
