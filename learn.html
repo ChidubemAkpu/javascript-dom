@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-box {
+            height: 200px;
+            width: 300px;
+            margin: 5px auto;
+            border: 16px red solid;
+            opacity: 0;
+            transition:all 1s linear;
+            bottom: -300px;
+            left: -300px;
+            position: relative;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <div class="my-box">Omo</div>
+    <script>
+    let eachBox = document.querySelectorAll('.my-box');
+    eachBox.forEach((el) => el.style.opacity = '0');
+    let windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    window.addEventListener('scroll', myVisible)
+    function myVisible() {
+        for (let item of eachBox) {
+         let heightFromTop = item.getBoundingClientRect().top;
+         if (heightFromTop < windowHeight) {
+            item.style.opacity = '1';
+            item.style.bottom = '10px'
+            item.style.left = '10px'
+         } else{
+            item.style.opacity = '0';
+            item.style.bottom = '-300px';
+            item.style.left = '-300px';
+            
+         }
+        }
+    }
+    
+    </script>
+</body>
+</html>
