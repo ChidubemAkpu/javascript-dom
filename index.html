@@ -44,6 +44,7 @@
         <section></section> <br>
         <p></p>
     </div>
+    <a href="learn.html">Get the other site</a>
     <script>
         "use strict";
         let div = document.querySelector('.alert');
@@ -62,11 +63,12 @@
                 div2.style.display = 'block'
                 document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'block');
             } else {
-                div2.style.display = 'none';
-                document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'none');
+                setTimeout(() => div2.style.display = 'none', 500);
+                setTimeout(() => document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'none'), 500);
             }
             
         }
+        
 
         function removeFunction() {
             name--
@@ -78,8 +80,8 @@
                 div2.style.display = 'block'
                 document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'block');
             } else {
-                div2.style.display = 'none';
-                document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'none');
+                setTimeout(() => div2.style.display = 'none', 500);
+                setTimeout(() => document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'none'), 500);
             }
         }
     </script>
