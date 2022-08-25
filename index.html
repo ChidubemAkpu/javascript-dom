@@ -4,86 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn javascript</title>
-    <style>
-        .alert, .showMe{
-            padding: 15px;
-            border: 1px solid #d6e9c6;
-            border-radius: 4px;
-            color: #3c763d;
-            background-color: #dff0d8;
-            text-align: center;
-            max-width:600px;
-            margin: auto;
-            margin-bottom: 20px;
-        }
-        p{
-            color:red;
-            font-size:xx-large;
-            display: none;
-        }
-        #plus{
-            margin-right: 40px;
-        }
-        #plus, #minus{
-            cursor: pointer;
-            font-size: xx-large;
-        }
-        .showMe{
-            display: none;
-        }
-    </style>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
+ <section>
     
-    <div class="alert">
-        <strong>Hi there!</strong> Add to cart.<br> <article>$100</article><b id="plus" onclick="addFunction()">+</b><b id="minus" onclick="removeFunction()">-</b><br>
-        <p></p>
-    </div>
-    <div class="showMe">
-        <section></section> <br>
-        <p></p>
-    </div>
-    <a href="learn.html">Get the other site</a>
-    <script>
-        "use strict";
-        let div = document.querySelector('.alert');
-        let div2 = document.querySelector('.showMe');
-        let div3 = document.querySelector('article');
-        let amount = div3.innerHTML.slice(1);
-        
-        let name = 0;
-        function addFunction() {
-            name++
-            document.querySelector('section').innerHTML= 'added to cart'
-            document.querySelectorAll('p')[0].innerHTML = name;
-            document.querySelectorAll('p')[1].innerHTML ='$' + (name * +amount) ;
-            document.querySelectorAll('p')[1].style.color='blue'
-            if (name > 0) {
-                div2.style.display = 'block'
-                document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'block');
-            } else {
-                setTimeout(() => div2.style.display = 'none', 500);
-                setTimeout(() => document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'none'), 500);
-            }
-            
-        }
-        
-
-        function removeFunction() {
-            name--
-            document.querySelector('section').innerHTML = 'removed one item from cart'
-            document.querySelectorAll('p')[0].innerHTML = name;
-            document.querySelectorAll('p')[1].innerHTML ='$' + (name * +amount) ;
-            document.querySelectorAll('p')[1].style.color='blue'
-            if (name > 0) {
-                div2.style.display = 'block'
-                document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'block');
-            } else {
-                setTimeout(() => div2.style.display = 'none', 500);
-                setTimeout(() => document.querySelectorAll('p').forEach((styleMe) =>styleMe.style.display = 'none'), 500);
-            }
-        }
-    </script>
+ </section>
+ <div>
+    <p>X</p>
+    Happy Birthday!!!
+ </div>
 </body>
 </html>
