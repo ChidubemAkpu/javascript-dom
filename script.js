@@ -77,12 +77,4 @@ function birthdayBox() {
 //     alert(result.value)
 // }
 
-let rectangle = {
-    width: 25,
-    length: 20,
-    area: 100,
-    perimeter: 10
-}
-
-let {length, width,  area, perimeter} = rectangle;
-alert(width)
+// addded stuff
