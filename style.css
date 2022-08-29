@@ -1,3 +1,4 @@
+
 div{
     border: 2px solid red;
     height: 50vh;
@@ -15,17 +16,7 @@ p{
 .display-class {
     display: none;
 }
-section{
-    height: 30px;
-    width: 30px;
-    margin: 2em auto;
-    display: none;
-    border-radius: 50%;
-    border: 3px solid silver;
-    border-top: 3px solid red;
-    animation: rotateMe 0.9s infinite;
-    animation-timing-function: linear;
-}
+
 
 @keyframes rotateMe {
     0%{
@@ -37,4 +28,40 @@ section{
 }
 .remove-loader{
     display: block;
+}
+
+.alert{
+    margin-top: 2em;
+    height: auto;
+    padding: 15px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    color: #3c763d;
+    background-color: #dff0d8;
+}
+.example {
+    border: 25px solid #E8C48F;
+    padding: 20px;
+    margin: 0;
+    top: 0;
+    border: 2px solid red;
+    flex-basis: 40vw;
+    flex-grow: 0;
+}
+
+.carousel{
+  margin: auto;
+  height: 30vh;
+  width: 60vw;
+  gap: 5vw;
+  overflow: hidden;
+  
+}
+.carousel-inner{
+  display: flex;
+  border: 2px solid black;
+  height: 90%;
+  width: 300vw;
+  transition: transform 20s;
+  transition-timing-function: linear;
 }
