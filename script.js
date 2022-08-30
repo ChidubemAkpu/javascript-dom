@@ -14,67 +14,41 @@
 //   }).then(getit => getit());
 // }
 
-// function loadScript(src) {
-//     return new Promise((resolve, reject) =>{
-//         let script = document.createElement('script');
-//         script.src = src;
-//         document.head.append(script)
-//         script.onload = () => resolve(script);
-//         script.onerror = () => reject(new Error('Loading was unsuccessful'));
-        
-//     })
-// }
-
-// loadScript("/article/promise-chaining/one.js")
-//   .then(function(script) {
-//     return loadScript("/article/promise-chaining/two.js");
-//   })
-//   .then(function(script) {
-//     return loadScript("/article/promise-chaining/three.js");
-//   })
-//   .then(function(script) {
-//     // use functions declared in scripts
-//     // to show that they indeed loaded
-//     one();
-//     two();
-//     three();
-//   }).catch((error) => alert(error));
 
 
+// // // // 'use strict';
 
-// // // 'use strict';
+// // // // const range = {
+// // // //     from: 1,
+// // // //     to: 20,
 
-// // // const range = {
-// // //     from: 1,
-// // //     to: 20,
+// // // //     [Symbol.iterator]() {
+// // // //         this.current = this.from;
+// // // //         return this;
+// // // //     },
 
-// // //     [Symbol.iterator]() {
-// // //         this.current = this.from;
-// // //         return this;
-// // //     },
+// // // //     next() {
+// // // //         if (this.current <= this.to) {
+// // // //             return {done: false, value: this.current++}
+// // // //         } else {
+// // // //             return {done: true}
+// // // //         }
+// // // //     }
+// // // // }
 
-// // //     next() {
-// // //         if (this.current <= this.to) {
-// // //             return {done: false, value: this.current++}
-// // //         } else {
-// // //             return {done: true}
-// // //         }
-// // //     }
+// // // // for (let eachEl of range) {
+// // // //     alert(eachEl)
+// // // // }
+
+
+
+// // // let myStr = 'HelloUser';
+
+// // // let iterator = myStr[Symbol.iterator]();
+// // // while(true) {
+// // //     let result = iterator.next();
+// // //     if (result.done) break;
+// // //     alert(result.value)
 // // // }
 
-// // // for (let eachEl of range) {
-// // //     alert(eachEl)
-// // // }
-
-
-
-// // let myStr = 'HelloUser';
-
-// // let iterator = myStr[Symbol.iterator]();
-// // while(true) {
-// //     let result = iterator.next();
-// //     if (result.done) break;
-// //     alert(result.value)
-// // }
-
-// // addded stuff
+// // // addded stuff

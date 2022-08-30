@@ -1,4 +1,7 @@
 
+*{
+    box-sizing: border-box;
+}
 div{
     border: 2px solid red;
     height: 50vh;
@@ -40,28 +43,25 @@ p{
     background-color: #dff0d8;
 }
 .example {
-    border: 25px solid #E8C48F;
     padding: 20px;
     margin: 0;
     top: 0;
+    width: 200px;
     border: 2px solid red;
-    flex-basis: 40vw;
-    flex-grow: 0;
 }
 
 .carousel{
   margin: auto;
   height: 30vh;
-  width: 60vw;
-  gap: 5vw;
+  width: 200px;
   overflow: hidden;
   
 }
 .carousel-inner{
   display: flex;
   border: 2px solid black;
-  height: 90%;
-  width: 300vw;
-  transition: transform 20s;
+  height: 100%;
+  width: 1200px;
+  transition: transform 1s;
   transition-timing-function: linear;
 }
