@@ -2,45 +2,10 @@
 *{
     box-sizing: border-box;
 }
-div{
-    border: 2px solid red;
-    height: 50vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-p{
-    position: absolute;
-    top: 0px;
-    right: 10px;
-}
-
-.display-class {
-    display: none;
-}
-
-
-@keyframes rotateMe {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg)
-    }
-}
-.remove-loader{
-    display: block;
-}
-
-.alert{
-    margin-top: 2em;
-    height: auto;
-    padding: 15px;
-    border: 1px solid #d6e9c6;
-    border-radius: 4px;
-    color: #3c763d;
-    background-color: #dff0d8;
+body{
+    display: grid;
+    height: 100vh;
+    place-content: center;
 }
 .example {
     padding: 20px;
