@@ -16,7 +16,7 @@ function carouselFunc() {
                 let theRealWidth = parseInt(getComputedStyle(theCarousel).width);
                 let theClone = theScrollLeaf[pos].cloneNode(true);
                 pos++;
-                theCarousel.style.width =  theRealWidth + 200 + 'px';
+                theCarousel.style.width =  theRealWidth + 250 + 'px';
                 theCarousel.append(theClone);
                 resolve(carouselFunc)}, 3000);
         }).then(a => a())
