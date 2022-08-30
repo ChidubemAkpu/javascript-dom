@@ -1,17 +1,14 @@
 let theCarousel = document.querySelector('.carousel-inner');
 
 let theSize = 0;
-async function carouselFunc() {
+function carouselFunc() {
     let theScrollLeaf = document.querySelectorAll('.example');
     theCarousel.style.transform = `translateX(${theSize}px)`
     theSize -= 200;
-    theCarousel.addEventListener('transitionend', () => {
-        let theFirst = theScrollLeaf[0].cloneNode(true);
-        theCarousel.append(theFirst);
-        theScrollLeaf[0].remove();
+    theCarousel.addEventListener('transitionend', function handler() {
+        theCarousel.removeEventListener('transitionend', handler)
         new Promise(resolve => {
-            console.log(theFirst)
-            resolve(carouselFunc)
+            setTimeout(() => resolve(carouselFunc), 3000);
         }).then(a => a())
     })
 }
