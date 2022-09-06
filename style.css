@@ -14,3 +14,43 @@ p{
   padding: 1em;
   border-radius: 10px;;
 }
+
+.go-to-another{
+  background: rgb(43, 121, 43);
+  width: 50%;
+  padding: 1em;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+form{
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5em;
+  padding: 1em;
+  border-radius: 10px;;
+}
+.gen-input{
+  width: 60%;
+  min-height: 30px
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  gap: 5em;
+}
+.view-action{
+  padding: 0.5em;
+  border-radius: 5px;
+  opacity: 0;
+  background: rgb(114, 207, 114);
+  color: white;
+}
