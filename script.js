@@ -3,6 +3,10 @@ const displayRegion = document.querySelector('.gen-input');
 const myForm = document.querySelector('form');
 const myAction= document.querySelector('.view-action')
 actionButtons.addEventListener('click', generatePassWord);
+displayRegion.addEventListener('mousedown',blockIt);
+function blockIt(event){
+    event.preventDefault()
+}
 function generatePassWord(event) {
     if (!event.target.value) return;
 
