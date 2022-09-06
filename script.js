@@ -12,7 +12,7 @@ function generatePassWord(event) {
     }
     navigator.clipboard.writeText(displayRegion.value);
     myAction.style.opacity = 1;
-    setTimeout(() => myAction.style.opacity = '', 1000);
+    setTimeout(() => myAction.style.opacity = '', 4000);
     displayRegion.value = '';
 
 }

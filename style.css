@@ -53,4 +53,5 @@ form{
   opacity: 0;
   background: rgb(114, 207, 114);
   color: white;
+  transition: opacity 2s;
 }
