@@ -1,31 +1,16 @@
-
-*{
-    box-sizing: border-box;
+.clock{
+  display: flex;
+  width: 60%;
+  margin: auto;
+  justify-content: space-around;
 }
 body{
-    display: grid;
-    height: 100vh;
-    place-content: center;
+  display: grid;
+  height: 100vh;
+  align-items: center;
 }
-.example {
-    padding: 20px;
-    margin: 0;
-    top: 0;
-    width: 200px;
-    border: 0.5px solid red;
-}
-
-.carousel{
-  margin: auto;
-  height: 30vh;
-  width: 200px;
-  overflow: hidden;
-  
-}
-.carousel-inner{
-  display: flex;
-  height: 95%;
-  width: 1200px;
-  transition: transform 1s;
-  transition-timing-function: linear;
+p{
+  border: 2px solid red;
+  padding: 1em;
+  border-radius: 10px;;
 }
