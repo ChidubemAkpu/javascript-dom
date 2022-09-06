@@ -11,6 +11,7 @@ function generatePassWord(event) {
         return;
     }
     navigator.clipboard.writeText(displayRegion.value);
+    if (displayRegion.value == '') return;
     myAction.style.opacity = 1;
     setTimeout(() => myAction.style.opacity = '', 4000);
     displayRegion.value = '';
