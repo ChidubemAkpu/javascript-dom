@@ -38,6 +38,14 @@ function theRealTime(){
            } else {
             timeModule[0].innerHTML = myHours;
            }
+        } else {
+            timeModule[3].innerHTML = 'AM'
+            if (hours < 10){
+                timeModule[0].innerHTML = '0' + hours;
+               } else {
+                timeModule[0].innerHTML = hours; 
+        }
+    }
     if (minutes < 10) {
         timeModule[1].innerHTML = '0' + minutes;
     } else {
@@ -49,8 +57,5 @@ function theRealTime(){
         timeModule[2].innerHTML = seconds;
     }
 
-    } else {
-        timeModule[3].innerHTML = 'AM'
-    }
 }
-setInterval(theRealTime, 1000)
+setInterval(theRealTime, 1000);
