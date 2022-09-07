@@ -30,16 +30,21 @@ console.log(timeModule)
 function theRealTime(){
     let date = new Date();
     let [hours, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()]
+    if (hours >= 12){
+        timeModule[3].innerHTML = 'PM'
+    } else {
+        timeModule[3].innerHTML = 'AM'
+    }
     if (hours > 12) {
            let myHours =  hours - 12;
-           timeModule[3].innerHTML = 'PM'
+           
            if (myHours < 10){
             timeModule[0].innerHTML = '0' + myHours;
            } else {
             timeModule[0].innerHTML = myHours;
            }
         } else {
-            timeModule[3].innerHTML = 'AM'
+            
             if (hours < 10){
                 timeModule[0].innerHTML = '0' + hours;
                } else {

@@ -34,3 +34,6 @@ function getPassWord() {
 }
 
 
+alert(nearlySimilarRectangles([[4,8], [15,30], [25,50]]))
+
+
