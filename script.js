@@ -1,39 +1,31 @@
-const actionButtons = document.querySelector('.buttons');
-const displayRegion = document.querySelector('.gen-input');
-const myForm = document.querySelector('form');
-const myAction= document.querySelector('.view-action')
-actionButtons.addEventListener('click', generatePassWord);
-displayRegion.addEventListener('mousedown',blockIt);
-function blockIt(event){
-    event.preventDefault()
-}
-function generatePassWord(event) {
-    if (!event.target.value) return;
+let theform = document.querySelector('form');
+let input = document.querySelector('input');
+let img = document.querySelector('.profile-image');
+let realname = document.querySelector('.username');
+let myAbout = document.querySelector('.about');
 
-    if (event.target.value == 'Generate') {
-        getPassWord()
+theform.addEventListener('submit', getInfo);
+
+function getInfo(e) {
+    e.preventDefault();
+    if (!input.value){
+        input.value = 'Cannot be empty....!!!';
+        input.style.color = 'red';
+        setTimeout(() => input.value = '', 2000);
         return;
     }
-    navigator.clipboard.writeText(displayRegion.value);
-    if (displayRegion.value == '') return;
-    myAction.style.opacity = 1;
-    setTimeout(() => myAction.style.opacity = '', 4000);
-    displayRegion.value = '';
+
+    makeCall(input.value)
+    input.value = ''
 
 }
 
-function getPassWord() {
-    let thePassword = ''
-    let letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-    for (let i = 0; i<=8; i++) {
-        let pos = Math.ceil(Math.random() * letters.length);
-        thePassword += letters.charAt(pos)
-    }
-    displayRegion.value = thePassword;
+async function makeCall(username) {
+    let response = await fetch(`https://api.github.com/users/${username}`);
+    let theData = await response.json();
+    let [imageurl, thename,about] = [theData.avatar_url, '@'+theData.login, theData.bio];
+    img.src = imageurl;
+    realname.innerHTML = thename;
+    myAbout.innerHTML = about;
 
 }
-
-
-alert(nearlySimilarRectangles([[4,8], [15,30], [25,50]]))
-
-
