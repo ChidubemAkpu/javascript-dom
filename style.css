@@ -72,7 +72,7 @@ iframe{
   padding: 2em;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: green;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
@@ -83,4 +83,24 @@ iframe{
   margin: auto;
   border-radius: 50%;
   height: 100px; width: 100px;
+}
+.loader{
+  display: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-top-color: green;
+  margin: auto;
+  animation:loader 0.6s linear  infinite;
+}
+
+@keyframes loader {
+ 0% {transform: rotate(0deg);}
+ 100% {transform: rotate(360deg)}
+
+}
+
+.change-them{
+  display: flex;
 }

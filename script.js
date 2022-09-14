@@ -3,11 +3,15 @@ let input = document.querySelector('input');
 let img = document.querySelector('.profile-image');
 let realname = document.querySelector('.username');
 let myAbout = document.querySelector('.about');
+let loader = document.querySelector('.loader');
+let profile = document.querySelector('.profile');
 
 theform.addEventListener('submit', getInfo);
 
 function getInfo(e) {
     e.preventDefault();
+    profile.classList.remove('change-them');
+    loader.classList.add('change-them');
     if (!input.value){
         input.value = 'Cannot be empty....!!!';
         input.style.color = 'red';
@@ -27,5 +31,11 @@ async function makeCall(username) {
     img.src = imageurl;
     realname.innerHTML = thename;
     myAbout.innerHTML = about;
+    loader.classList.remove('change-them');
+    profile.classList.add('change-them')
 
 }
+
+
+
+
